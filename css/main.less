@@ -1,0 +1,142 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2016-07-11 10:43:19
+ * @version $Id$
+ */
+*{margin:0;padding: 0;border:0;list-style: none;text-decoration: none}
+body{background-color: #f2f2f2;width:10rem;margin:0 auto;}
+//ip6 ip6s适配
+// @media (min-device-width : 375px) and (max-device-width : 667px) and (-webkit-min-device-pixel-ratio : 2){
+//       html{font-size: 37.5px;}
+// }
+// //ip6 plus ip6s plus适配
+// @media (min-device-width : 414px) and (max-device-width : 736px) and (-webkit-min-device-pixel-ratio : 3){
+//       html{font-size: 41.4px;}
+// }
+// //ip5 ip5s适配
+// @media (min-device-width : 320px) and (max-device-width : 640px) and (-webkit-min-device-pixel-ratio : 2){
+//       html{font-size: 32px;}
+// }
+// @media (min-device-width : 375px) and (max-device-width : 667px) and (-webkit-min-device-pixel-ratio : 2){
+//       html{font-size: 37.5px;}
+// }
+header{
+	.serach-box{
+		position: relative;
+		padding: 0.186rem 0 0.186rem 0.213rem;
+      .serach{
+      	 position: relative;
+      	 height: 0.693rem;
+      	 line-height: 0.693rem;
+      	 width:8.32rem;
+      	 border:1px solid #999;
+      	 overflow: hidden;
+      	 border-radius: 0.133rem;
+      	 box-shadow: 0 0.053rem 0.106rem rgba(0,0,0,0.2);
+      	 padding: 0 0.133rem;
+         span{
+           vertical-align: middle;
+           position: absolute;
+           margin-left: 0.133rem;
+           top:0.106rem;
+           left:0;
+           width:0.4rem;
+           z-index:2;
+           height: 0.48rem;
+           background: url(../images/un_ico_home_v66.png) no-repeat -1.57rem -7.36rem;
+           background-size: 2.77rem 8.69rem;
+         }
+         input{
+           position: absolute;
+           top:0;
+           left:0;
+           z-index:1;
+           padding-left: 0.533rem;
+         	width:8.053rem;
+         	height: 0.693rem;
+         	outline: none;
+         }
+      }
+      .user{
+      	width:1.173rem;
+      	height: 1.173rem;
+      	position: absolute;
+      	top:0;
+      	right:0;
+      	font-size:12px;
+      	color:#2EAAE0;
+      	font-weight:bold;
+      	span{
+      		display: block;
+      		width: 100%;
+      		position: absolute;
+      		bottom:0.133rem;
+      		left:0;
+      		text-align: center;
+      	}
+      }
+      .user:before{
+      	position: absolute;
+      	top:0.106rem;
+      	left:50%;
+      	margin-left:-0.325rem;
+      	content:"\0020";
+      	width:0.65rem;
+      	height: 0.693rem;
+      	background: url(../images/un_ico_home_v66.png) no-repeat -1.57rem -5.146rem;
+      	background-size: 2.77rem 8.69rem;
+      }
+	}
+	.carousel{
+		width:10rem;
+		height: 2rem;
+		position: relative;
+		
+		.carousel-con{
+			width:10rem;
+			height: 2rem;
+			overflow: hidden;
+			position: relative;
+			ul{
+				width:60rem;
+				height: 2rem;
+                position: absolute;
+                overflow: hidden;
+                
+				li{
+                    float: left;
+					width:10rem;
+					height: 2rem;
+					a{
+						img{
+							width:10rem;
+							height: 2rem;
+						}
+					}
+				}
+			}
+		}
+		.carousel-title{
+			position: absolute;
+			z-index:10;
+			bottom:0.266rem;
+			left:3.653rem;
+			overflow: hidden;
+			span{
+				float: left;
+				overflow: hidden;
+				border-radius: 50%;
+				width:0.213rem;
+				height: 0.213rem;
+				margin:0 0.133rem;
+				background-color: rgba(255,255,255,0.6);
+				
+			}
+			span.carousel-on{
+				background-color:rgba(9,159,222,1);
+			}
+		}
+	}
+}
