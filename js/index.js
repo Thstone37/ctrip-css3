@@ -23,15 +23,17 @@
     		var imgwidth=parseInt($(container).css("width"));
     		var len=ul.children.length;
     		var cloneli=ul.children[0].cloneNode(true);
+            var cloneli1=ul.children[len-1].cloneNode(true);
     		var span=container.querySelectorAll("span");          
     		$(ul).append(cloneli);
+            $(cloneli1).insertBefore(ul.children[0]);
     		var timer;
             var autoplay=function(){
     	        clearInterval(timer);
     	        timer=setInterval(function(){
     			     animateright();},3000);
             }
-            var count=0;
+            var count=1;
             var animateright=function(){
                  count++;
                 if(count==imgnum+1){
@@ -42,25 +44,25 @@
                 for(var i=0;i<span.length;i++){
                 	span[i].className="";
                 }
-                if(count>imgnum-1){
+                if(count>imgnum){
                 	span[0].className="carousel-on";
                 }else{
-                span[count].className="carousel-on";}
+                span[count-1].className="carousel-on";}
             }
             var animateleft=function(){
                count--;
-                if(count==-1){
-                	count=imgnum-1;               	
+                if(count==0){
+                	count=imgnum;               	
                 	$(ul).css("transform","translateX("+-1*(count+1)*10+"rem"+")");
                 }                
                  $(ul).animate({translateX:-1*count*10+"rem"},500);
                  for(var i=0;i<span.length;i++){
                 	span[i].className="";
                 }
-                if(count<0){
+                if(count<1){
                 	span[imgnum-1].className="carousel-on";
                 }else{
-                span[count].className="carousel-on";}
+                span[count-1].className="carousel-on";}
             }
             var img=ul.querySelectorAll("li img");
             for(var i=0;i<img.length;i++){
@@ -73,16 +75,32 @@
                  	//console.log(pagex);                     	
             	  }
             	  var ulleft;
+                  
                  img[i].ontouchmove=function(e){
                  	var touch=e.touches[0];
                  	 pagex1=touch.pageX;
-                 	 ulleft=-1*this.index*10;
-                 	 if(ulleft<-40){
+                     y=pagex1-pagex;
+                     x=(pagex1-pagex)/37.5+ulleft;
+                 	 ulleft=-1*this.index*10;                    
+                 	 if(ulleft==-50&&y<0){
                  	 	ulleft=0;
-                 	 }
-                 	 y=pagex1-pagex;
-                 	 x=(pagex1-pagex)/37.5+ulleft;
-                 	 
+                        
+                        
+                 	 }if(ulleft==-50&&y>0){
+                        ulleft=-50;
+                        
+                     }
+                     if(ulleft==-10&&y<0){
+                        ulleft=-10;
+                        
+                     }
+                     $(".carousel ul").css("transform","translateX("+x+"rem"+")");
+                     if(ulleft==-10&&y>0){
+                        ulleft=-60;
+                        // $(".carousel ul").css("transform","translateX("+ulleft+"rem"+")");
+                        // x=(pagex1-pagex)/37.5+ulleft;
+                        // // $(".carousel ul").css("transform","translateX("+x+"rem"+")");
+                     }                 	 
                  	 $(".carousel ul").css("transform","translateX("+x+"rem"+")");
                  }
                  img[i].ontouchend=function(e){
@@ -92,7 +110,11 @@
                  		$(ul).animate({translateX:-1*count*10+"rem"},500);
                  	}                 	
                     animateright();}
-                    else{animateleft();}                    
+                    else{
+                        if(ulleft==-60){
+                            $(ul).animate({translateX:"-50rem"},500);
+                        }
+                        animateleft();}                    
                      autoplay();
                   }
                  }           
