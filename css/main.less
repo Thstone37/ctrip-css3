@@ -23,9 +23,16 @@ body{background-color: #f2f2f2;width:10rem;margin:0 auto;}
 //       html{font-size: 37.5px;}
 // }
 header{
+  position: relative;
 	.serach-box{
-		position: relative;
+		position: fixed;
+    top:0;
+   
+    z-index:10;
+    width:10rem;
+    margin:0 auto;
 		padding: 0.186rem 0 0.186rem 0.213rem;
+    background-color: #f2f2f2;
       .serach{
       	 position: relative;
       	 height: 0.693rem;
@@ -64,7 +71,7 @@ header{
       	height: 1.173rem;
       	position: absolute;
       	top:0;
-      	right:0;
+      	right:0.213rem;
       	font-size:12px;
       	color:#2EAAE0;
       	font-weight:bold;
@@ -72,7 +79,7 @@ header{
       		display: block;
       		width: 100%;
       		position: absolute;
-      		bottom:0.133rem;
+      		bottom:0.05rem;
       		left:0;
       		text-align: center;
       	}
@@ -81,7 +88,7 @@ header{
       	position: absolute;
       	top:0.106rem;
       	left:50%;
-      	margin-left:-0.325rem;
+      	margin-left:-0.3rem;
       	content:"\0020";
       	width:0.65rem;
       	height: 0.693rem;
@@ -90,6 +97,7 @@ header{
       }
 	}
 	.carousel{
+    margin-top:1.16rem;
 		width:10rem;
 		height: 2rem;
 		position: relative;
@@ -140,4 +148,529 @@ header{
 			}
 		}
 	}
+}
+nav{
+  padding: 0.106rem;
+  width:9.788rem;
+  margin-bottom:0.106rem;
+  background-color: #fff;
+  .row{
+    width:100%;
+    display: flex;
+    margin-bottom:0.106rem; 
+    justify-content:space-around;
+    a{
+      font-size:15px;
+      color:#fff;
+      display: block;
+      text-align: center;
+    }
+    .col{
+      height:2.4rem; 
+      flex:1;
+      border-left:1px solid #fff;
+    }
+    div:nth-child(1){
+      position: relative;
+      border-top-left-radius: 0.133rem;
+      border-bottom-left-radius: 0.133rem;
+      border-left:none;
+    a{
+      line-height: 1.2rem;
+      height: 2.4rem
+      }
+    a:after{
+      position: absolute;
+      left:50%;
+      margin-left:-0.533rem;
+      bottom:0.375rem;
+      width:1.066rem;
+      height:0.88rem;
+      content:"";
+      }
+    }
+     div:nth-child(2){
+      a{display: block;line-height:1.2rem; }
+      a:nth-child(2){
+        border-top:1px solid #fff;
+      }
+    }
+    div:nth-child(3){
+      a{display: block;line-height:1.2rem; }
+      a:nth-child(2){
+        border-top:1px solid #fff;
+      }
+      border-top-right-radius: 0.133rem;
+      border-bottom-right-radius: 0.133rem;
+    }
+    .col1{
+      background-color: #ff697a;
+    }
+  }
+ .row1{
+      .col{
+      background-color: #ff697a;
+    }
+    div:nth-child(1){
+      a:after{
+        background:url(../images/un_ico_home_v66.png) no-repeat 0 -3.466rem;
+        background-size:2.77rem 8.69rem;
+        }
+      }
+ }
+ .row2{
+  .col{
+    background-color: #3d98ff;
+  }
+    div:nth-child(1){
+      a:after{
+        background:url(../images/un_ico_home_v66.png) no-repeat -1.333rem -3.2rem;
+        background-size:2.77rem 8.69rem;
+        }
+      }
+ }
+  .row3{
+  .col{
+    background-color: #44c522;
+  }
+    div:nth-child(1){
+      a:after{
+        background:url(../images/un_ico_home_v66.png) no-repeat 0 -4.8rem;
+        background-size:2.77rem 8.69rem;
+        }
+      }
+ }
+   .row4{
+    margin-bottom: 0;
+  .col{
+    background-color: #fc9720;
+  }
+    div:nth-child(1){
+      a{display: block;line-height:1.2rem;height: 1.2rem;}
+      a:nth-child(2){
+        border-top:1px solid #fff;
+      }
+    }
+ }
+}
+.subnav{
+  margin-bottom:0.213rem; 
+  .row{
+    display: flex;
+    div{
+      flex:1;
+      margin-bottom: 1px;
+      margin-right: 1px;
+      background-color: #fff;
+     a{
+      position: relative;
+      font-size:0.373rem;
+      color:#000;
+      height:0.747rem; 
+      display: block;
+      text-align: center;
+      padding-top: 1.066rem;
+     }
+     a:before{
+      position: absolute;
+      top:0.293rem;
+      left:50%;
+      content:"";
+      width:0.693rem;
+      height:0.666rem;
+      margin-left:-0.346rem;
+      background: url(../images/un_ico_subnav.png) no-repeat;
+      background-size: 26px auto;
+     }
+    }
+  }
+  .row1{
+    div:nth-child(1){
+      a:before{
+      background-position: 0 0;
+      }
+    }
+        div:nth-child(2){
+      a:before{
+      background-position: 0 -0.8rem;
+      }
+    }
+        div:nth-child(3){
+      a:before{
+      background-position: 0 -1.6rem;
+      }
+    }
+        div:nth-child(4){
+      a:before{
+      background-position: 0 -2.4rem;
+      }
+    }
+  }
+    .row2{
+    div:nth-child(1){
+      a:before{
+      background-position: 0 -3.2rem;
+      }
+    }
+        div:nth-child(2){
+      a:before{
+      background-position: 0 -4rem;
+      }
+    }
+        div:nth-child(3){
+      a:before{
+      background-position: 0 -4.8rem;
+      }
+    }
+        div:nth-child(4){
+      a:before{
+      background-position: 0 -5.6rem;
+      }
+    }
+  }
+}
+.sales-box{
+  width:100%;
+  background-color: #fff;
+  h2{
+    margin: 0 0.213rem;
+    position: relative;
+    width:9.574rem;
+    height: 1.173rem;
+    line-height: 1.173rem;
+    span{
+      position: absolute;
+      top:50%;
+      left:0;
+      background: url(../images/sales-box.png) no-repeat;
+    }
+    a{
+      position: absolute;
+      top:50%;
+      right:0;
+      font-size: 0.32rem;
+      color:#fff;
+      line-height:0.533rem;
+      height: 0.533rem;
+      margin-top:-0.2rem;
+      border-radius: 0.533rem;
+      padding: 0 0.48rem 0 0.32rem; 
+
+    }
+  }
+  .sales-bd{
+    display: flex;
+    margin: 0 0.213rem 0.213rem;
+    padding-bottom: 0.213rem;
+    >div{
+      flex:1;
+    }
+  }
+}
+.sales-tmh{
+  h2{
+    span{
+      width:2.106rem;
+      height: 0.4rem;
+      margin-top:-0.2rem;
+      background-size: 2.106rem auto;
+      background-position: 0 0;
+    }
+    a{
+      background: -webkit-linear-gradient(left,#ff4e63,#ff6cc9);
+      background: -moz-linear-gradient(left,#ff4e63,#ff6cc9);
+      background: -ms-linear-gradient(left,#ff4e63,#ff6cc9);
+      background: -o-linear-gradient(left,#ff4e63,#ff6cc9);
+       background: linear-gradient(left,#ff4e63,#ff6cc9);
+    }
+  }
+  .sales-bd{
+    .js-seckill-box{
+      flex:1;
+      padding-bottom: 0.5rem;
+      margin-right:0.053rem;
+      background-color: #f2f2f2;
+      a{
+        font-size:0.32rem;
+        color:#000;
+        .sales-img{
+          position: relative;
+          width:4.733rem;
+          height: 3.12rem;
+          img{width:100%;height: 100%}
+          span.flag-hot{
+            position: absolute;
+            top:0;
+            left:0;
+            color:#fff;
+            background-color: #fd3a51;
+            line-height: 0.533rem;
+            padding: 0 0.16rem 0 0.213rem;
+          }
+          span.flag-hot:after{
+            position: absolute;
+            top:0;
+            right:-0.213rem;
+            border-width:0.533rem 0.213rem;
+            border-color:#fd3a51 transparent transparent;
+            border-style: solid;
+            content:"";
+          }
+          div.sales-countdown{
+            position: absolute;
+            overflow: hidden;
+            width:4.467rem;
+            height:0.667rem;
+            padding: 0 0.133rem;
+            box-sizing: content-box;
+            line-height: 0.667rem;
+            color:#fff;
+            left:0;
+            bottom:0;
+            background-color: rgba(0,0,0,0.6);
+            text-align:right;
+            span.js-words{
+              float: left;
+            }
+            span.js-hour,span.js-min,span.js-sec{
+              border:1px solid #fff;
+            }
+          }
+        }
+        p{
+              height: 1rem;
+              padding: 0.213rem;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+              display: -moz-box;
+              display: -ms-box;
+              display: -o-box;
+              display: box;
+              -webkit-line-clamp: 2;
+                 -moz-line-clamp: 2;
+                  -ms-line-clamp: 2;
+                   -o-line-clamp: 2;
+                      line-clamp: 2;
+               -webkit-box-orient: vertical;
+                  -moz-box-orient: vertical;
+                   -ms-box-orient: vertical;
+                    -o-box-orient: vertical;   
+                       box-orient: vertical;
+              line-height: 0.56rem;
+              overflow: hidden;
+
+        }
+        div.sales-price{
+          em{
+            color:#ff495e;
+            font-style: normal;
+            font-size:0.48rem;
+            dfn{
+              font:0.32rem/1.5 arial;
+            }
+            b{font-size:0.4rem;
+              line-height: 0.5rem;
+              height: 0.5rem;
+              border-radius: 0.5rem;}
+          }
+          span{
+            display: inline-block;
+            text-align: center;
+            color:#fff;
+            background-color: #ff495e;
+            font-size: 0.32rem;
+            line-height: 0.4rem;
+            height: 0.4rem;
+            width:0.8rem;
+            border-radius: 0.4rem;
+          }
+        }
+      }
+    }
+  .js-salesad-box{
+    flex:1;
+    a{color:#000;font-size:0.32rem;}
+    .sales-list{
+     background-color: #f2f2f2;
+     height: 2.346rem;
+     margin-bottom: 0.106rem;
+     a{
+      position: relative;
+      display: block;
+      height: 2.346rem;
+      img{
+        position: absolute;
+        bottom: 0;
+        right:0;
+        width:1.44rem;
+        height: 1.92rem;
+      }
+      .sales-list-title{
+          padding-left:0.213rem;
+          padding-top:0.213rem;
+         
+        h3{
+          color:#fd3a51;
+        }
+        p{
+          color:#444;
+        }
+      }
+     }
+    }
+    .sales-row{
+     
+     display: flex;
+     .sales-col{
+      flex:1;
+      text-align: center;
+      background-color: #f2f2f2;
+      a{
+        
+        img{
+          margin-top:1rem;
+          width:1.333rem;
+          height: 0.933rem;
+        }
+      }
+     }
+     .sales-col1{
+      margin-right:0.106rem;
+     a{
+      h3{
+        margin-top: 0.213rem;
+        color:#6aabff;
+      }
+      p{
+        color:#444;
+        span{
+          color:#6aabff;
+        }
+      }
+      }
+     }
+     .sales-col2{
+     a{
+      h3{
+        margin-top: 0.213rem;
+        color:#53ca72;
+      }
+      p{
+        color:#444;
+        span{
+          color:#53ca72;
+        }
+      }
+      }
+     }
+  }
+  }
+}
+}
+.sales-huodong{
+  h2{
+    span{
+      width:2.106rem;
+      height: 0.4rem;
+      margin-top:-0.2rem;
+      background-size: 2.106rem auto;
+      background-position: 0 -0.506rem;
+    }
+    a{
+      background: -webkit-linear-gradient(left,#ffa93a,#ffd35c);
+      background: -moz-linear-gradient(left,#ffa93a,#ffd35c);
+      background: -ms-linear-gradient(left,#ffa93a,#ffd35c);
+      background: -o-linear-gradient(left,#ffa93a,#ffd35c);
+       background: linear-gradient(left,#ffa93a,#ffd35c);
+    }
+  }
+  div.sales-bd{
+    margin:0;
+    display: flex;
+    >div{flex:1;}
+    .js-seckill-box{
+      a{
+        display: block;
+        img{
+          width:100%;
+          height: 100%;
+        }
+      }
+      div:nth-child(1){
+        a{
+          width:5rem;
+          height: 5rem;
+        }
+    }
+          div:nth-child(2){
+        a{
+          width:5rem;
+          height: 2.5rem;
+        }
+      }
+  }
+  .js-salesad-box{
+      a{
+        display: block;
+        width:5rem;
+        height: 2.5rem;
+        img{
+          width:100%;
+          height: 100%;
+        }
+      }
+  }
+}
+}
+footer{
+  margin-top:0.213rem;
+  .tool-cn{
+    background-color: #fff;
+    display: flex;
+    a{
+      flex:1;
+      display: block;
+      color:#333;
+      font-size: 0.32rem;
+      text-align: center;
+      position: relative;
+      height: .580rem;
+      padding-top: 0.693rem;
+    }
+    a:before{
+      position: absolute;
+      left:50%;
+      top:0.186rem;
+      transform:translateX(-50%);
+      display: block;
+      background: url(../images/un_ico_home_v66.png) no-repeat;
+      background-size:2.77rem 8.69rem;
+      content:"";
+      width:0.426rem;
+      height:0.453rem;
+    }
+    a:nth-child(1):before{
+    background-position: -1.6rem -4.08rem;
+    }
+    a:nth-child(2):before{
+    background-position: -1.6rem -4.613rem;
+    }
+    a:nth-child(3):before{
+    background-position: -1.6rem -8.213rem;
+    width:0.48rem;
+    height: 0.506rem;
+    }
+  }
+  .tool-ver{
+    background-color: #f2f2f2;
+    font-size: 0.32rem;
+    color:#666;
+    text-align: center;
+    padding-top: 0.213rem;
+    a{
+      font-size: 0.32rem;
+      color:#666;
+      margin:0 0.106rem;
+    }
+  }
 }

@@ -8,7 +8,7 @@
  Zepto(function($){
  	   //动态设置html的基准font-size值，根据不同屏幕尺寸设计
  	   var html=document.getElementsByTagName('html')[0];
- 	   var std=html.style.fontSize = window.innerWidth / 10 ;
+ 	   var std= window.innerWidth / 10 ;
       if(std>54){
       	std=54;
       }
